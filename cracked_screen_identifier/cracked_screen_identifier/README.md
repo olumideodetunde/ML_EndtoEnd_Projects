@@ -1,7 +1,7 @@
 cracked_screen_identifier
 ==============================
 
-This projects presenta the complete end to end ML cycle of the cracked_screen_identifier app; an image classification project.
+This projects presents the complete end to end ML cycle of the cracked_screen_identifier app; an image classification project.
 
 Project Organization
 ------------

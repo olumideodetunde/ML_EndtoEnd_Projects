@@ -19,11 +19,6 @@ def main(input_filepath, output_filepath):
     ''' Runs data processing scripts to turn raw data from (../interim) into
         shuffled and split data ready to be analyzed (saved in ../processed).'''
         
-    # # Remove existing folders and contents in output path if any
-    # sub_dirs = glob.glob(output_filepath)
-    # for f in sub_dirs:
-    #     os.remove(f)
-
     # make directories for train, val, and test
     train_dir = os.path.join(output_filepath,"train")
     os.makedirs(train_dir, exist_ok=True)

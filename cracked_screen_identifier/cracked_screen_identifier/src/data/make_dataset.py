@@ -12,14 +12,15 @@ import pandas as pd
 @click.argument('output_filepath', type=click.Path())
 
 def main(input_filepath, output_filepath):
-    """ Runs data processing scripts to turn raw data from (../interim) into
-        transformed data ready to be analyzed (saved in ../processed).
+    """ Runs data processing scripts to turn raw data from (../raw) into
+        same sized image and generates labels for all the images 
+        ready to be used (saved in ../interim).
     """
     
     counter = 0
     images = []
     labels = []
-    subdirs = glob.glob(input_filepath + '/*screen')
+    subdirs = glob.glob(input_filepath + '/*screen') #identify the subdirectories in the input filepath
 
     for subdir in subdirs:
         label = os.path.basename(subdir).split('_')[0]

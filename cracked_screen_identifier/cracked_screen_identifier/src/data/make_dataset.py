@@ -27,6 +27,7 @@ def main(input_filepath, output_filepath):
 
         for file_path in glob.glob(subdir + '/*.jpg'):
             img = cv2.imread(file_path)
+            img = cv2.resize(img, (224,224), interpolation=cv2.INTER_AREA)
             new_filename = f'image_{counter}.jpg'
             new_filepath = os.path.join(output_filepath, new_filename)
             cv2.imwrite(new_filepath, img)

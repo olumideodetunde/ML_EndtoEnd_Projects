@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 import click
 import logging
-import os
-import glob
 import torch
 from pathlib import Path
 from torch import nn
@@ -45,6 +43,4 @@ class ModelNet(nn.Module):
         x = self.fc5(x) #No activation
         
         return F.log_softmax(x, dim=1)
-        
-    
     

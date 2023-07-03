@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-import click
-import logging
-from pathlib import Path
 import os
 import glob
 import cv2
+import click
+import logging
 import pandas as pd
+from pathlib import Path
 
 @click.command()
 @click.argument('input_filepath', type=click.Path(exists=True))

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import os
 import cv2
+import json
 import copy
 import torch
 import logging
@@ -11,56 +12,18 @@ from torch import optim
 import torch.nn.functional as F
 from torchvision import transforms
 from torch.utils.data import Dataset, DataLoader
-import matplotlib.pyplot as plt
 from datetime import datetime
 from model import ModelNet
 from torch.utils.tensorboard import SummaryWriter
 
+
+#--------Training loop and exp tracking ---------------
 def main():
-##--------- Prepare the data-------------
+    
     epochs = 20
     batch_size = 16
-    class PhoneDataset(Dataset):
-        def __init__(self, dir, csv_file, transform): 
-            
-            self.dir = dir
-            self.csv_file = pd.read_csv(csv_file)
-            self.csv_file['label_encoded'] = self.csv_file['label'].apply(lambda x: 0 if x == 'perfect' else 1)
-            self.transform = transform
-            
-        def __len__(self):
-            return len(self.csv_file)
-        
-        def __getitem__(self, idx):
-            image_name = os.path.join(self.dir, str(self.csv_file.iloc[idx,1]))
-            image = cv2.imread(image_name)
-            image =  torch.from_numpy(image).permute(2,0,1)
-            label = self.csv_file.iloc[idx,3] #label_encoded
-            return image,label
+    learning_rate = 0.001
 
-    # Create an instances of the dataset class
-    train_dir = "data/processed/train"
-    train_csv = "data/processed/train/label.csv"
-    train_transform = transforms.Compose([transforms.ToTensor()])
-    train_dataset = PhoneDataset(train_dir, train_csv, transform=train_transform)
-
-    val_dir = "data/processed/val"
-    val_csv = "data/processed/val/label.csv"
-    val_transform = transforms.Compose([transforms.ToTensor()])
-    val_dataset = PhoneDataset(val_dir, val_csv, transform=val_transform)
-
-    train_transform = transforms.Compose([transforms.ToPILImage(),
-                                        transforms.ToTensor(),])
-    val_transform = transforms.Compose([transforms.ToPILImage(),
-                                        transforms.ToTensor(),])
-
-    #Update the transforms
-    train_dataset.transform = train_transform
-    val_dataset.transform = val_transform
-    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
-    val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=True)
-
-#--------Trainig loop and exp tracking ---------------
     run_name = f"Run 1 -  Baseline Model"
     log_dir = "logs/" + datetime.now().strftime("%Y%m%d-%H%M%S") + "-" + run_name
     tb = SummaryWriter(log_dir=log_dir) #Create tensorboard object
@@ -117,6 +80,18 @@ def main():
             torch.save(model.state_dict(), f'{log_dir}/modelnet.pth')
             print("Saved the new best model")
     tb.close()
+    
+    parameters = {
+    "epochs": epochs,
+    "batch_size": batch_size,
+    "learning_rate": learning_rate,
+    "optimizer": optimizer.__class__.__name__,
+    "criterion": criterion.__class__.__name__,
+    "model": model.__class__.__name__,
+    "Inference Accuracy": 100 * correct / total
+    }
+    with open(f'{log_dir}/parameters.json', 'w') as fp:
+        json.dump(parameters, fp)
     
 if __name__ == '__main__':
     log_fmt = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'

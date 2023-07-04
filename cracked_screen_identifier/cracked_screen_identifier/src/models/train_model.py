@@ -1,99 +1,93 @@
 # -*- coding: utf-8 -*-
+#%%
 import os
 import cv2
 import json
 import copy
+import click
 import torch
 import logging
-import numpy as np
-import pandas as pd
-from torch import nn
-from torch import optim
-import torch.nn.functional as F
-from torchvision import transforms
-from torch.utils.data import Dataset, DataLoader
 from datetime import datetime
-from model import ModelNet
+from model_architecture import ModelNet
+from dataloader import main as dataloader_main
 from torch.utils.tensorboard import SummaryWriter
 
-
-#--------Training loop and exp tracking ---------------
-def main():
+class Trainer:
     
-    epochs = 20
-    batch_size = 16
-    learning_rate = 0.001
-
-    run_name = f"Run 1 -  Baseline Model"
-    log_dir = "logs/" + datetime.now().strftime("%Y%m%d-%H%M%S") + "-" + run_name
-    tb = SummaryWriter(log_dir=log_dir) #Create tensorboard object
-
-    model = ModelNet()
-    criterion = nn.NLLLoss()
-    optimizer = optim.Adam(model.parameters(), lr=0.001)
-    best_loss = float('inf')
-    train_losses = []
-    valid_losses = []
-
-    for epoch in range(1, epochs+1):
+    def __init__(self, epochs, learning_rate):
         
-        train_loss = 0.0
-        valid_loss = 0.0
+        self.epochs = epochs
+        self.learning_rate = learning_rate
+        self.model = ModelNet()
+        self.criterion =  torch.nn.LLLoss()
+        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=self.learning_rate)
+        self.best_loss = float("inf")
+        self.train_losses = []
+        self.val_losses = []
+        self.tb =  None
         
-        model.train()
-        for data, label in train_loader:
-            data = data.float()
-            #zero the gradients
-            optimizer.zero_grad()
-            #forward pass
-            output = model(data.float())
-            #Calculate batch loss
-            loss = criterion(output, label)
-            #backward pass
-            loss.backward()
-            #Optimize the weights
-            optimizer.step()
-            #update training loss
-            train_loss += loss.item() * data.size(0)
+    def train_step(self, image, label):
+        image = image.float()
+        self.optimizer.zero_grad()
+        output = self.model(image)
+        loss =  self.criterion(output, label)
+        loss.backward()
+        self.optimizer.step()
+        return loss.item() * image.size(0)
+    
+    def train_model(self):
+        experiment_name = f"Experiment 1 - Baseline Model"
+        log_dir = "logs/" + datetime.now().strftime("%Y%m%d-%H%M%S") + "-" + experiment_name
+        self.tb = SummaryWriter(log_dir=log_dir)
+        
+        for epoch in range(1, self.epochs+1):
             
-        #validate the model
-        model.eval()
-        for data, label in val_loader:
-            data = data.float()
-            output = model(data)
-            loss = criterion(output, label)
-            valid_loss += loss.item() * data.size(0)
+            train_loss = 0.0
+            val_loss = 0.0
             
-        #Calculate the average losses
-        train_loss = train_loss/len(train_loader.sampler)
-        valid_loss = valid_loss/len(val_loader.sampler)
-        train_losses.append(train_loss)
-        valid_losses.append(valid_loss)
+            self.model.train()
+            for image, label in train_loader:
+                train_loss = self.train_step(image, label)
+            
+            self.model.eval()
+            for image, label in val_loader:
+                val_loss =  self.train_step(image, label)
+                
+            train_loss =  train_loss / len(train_loader.sampler)
+            val_loss =  val_loss / len(val_loader.sampler)
+            self.train_losses.append(train_loss)
+            self.val_losses.append(val_loss)
+            
+            self.tb.add_scalars("Loss", {"Train": train_loss, "Val": val_loss}, epoch)
+            
+            if val_loss < self.best_loss:
+                self.best_loss = val_loss
+                torch.save(self.model, f'{log_dir}/modelnet.pth')
+                print("Saved the new best model")
+                
+        self.tb.close()
         
-        tb.add_scalars("Loss", {"Train": train_loss, "Val": valid_loss}, epoch)
-        print('Epoch: {} \tTraining Loss: {:.6f} \tValidation Loss: {:.6f}'.format(epoch, train_loss, valid_loss))
-        
-        #Save the model if validation loss has decreased
-        if valid_loss < best_loss:
-            best_loss = valid_loss
-            best_model_weights = copy.deepcopy(model.state_dict())
-            torch.save(model.state_dict(), f'{log_dir}/modelnet.pth')
-            print("Saved the new best model")
-    tb.close()
-    
-    parameters = {
-    "epochs": epochs,
-    "batch_size": batch_size,
-    "learning_rate": learning_rate,
-    "optimizer": optimizer.__class__.__name__,
-    "criterion": criterion.__class__.__name__,
-    "model": model.__class__.__name__,
-    "Inference Accuracy": 100 * correct / total
-    }
-    with open(f'{log_dir}/parameters.json', 'w') as fp:
-        json.dump(parameters, fp)
-    
-if __name__ == '__main__':
-    log_fmt = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-    logging.basicConfig(level=logging.INFO, format=log_fmt)
+        parameters = {
+            "epochs": self.epochs,
+            "learning_rate": self.learning_rate,
+            "optimizer": self.optimizer.__class__.__name__,
+            "criterion": self.criterion.__class__.__name__,
+            "model": self.model.__class__.__name__,
+        }
+
+        with open(f'{log_dir}/parameters.json', 'w') as fp:
+            json.dump(parameters, fp)
+            
+    def run_training(self):
+        self.train_model()
+
+@click.command()
+@click.option("--epochs", default=10, help="Number of epochs")
+@click.option("--learning-rate", default=0.001, help="Learning rate")
+def main(epochs, batch_size, learning_rate):
+    train_loader, val_loader = main("data/processed")
+    trainer = Trainer(epochs, batch_size, learning_rate)
+    trainer.run_training()
+
+if __name__ == "__main__":
     main()

@@ -8,10 +8,6 @@ import logging
 import pandas as pd
 from pathlib import Path
 
-# @click.command()
-# @click.argument('input_filepath', type=click.Path(exists=True))
-# @click.argument('output_filepath', type=click.Path(exists=True))  
-
 class DataCreator:
     def __init__(self, input_filepath, output_filepath):
         self.input_filepath =  input_filepath

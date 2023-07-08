@@ -12,15 +12,15 @@ from pathlib import Path
 @click.argument('output_filepath', type=click.Path())
 
 def main(input_filepath, output_filepath):
+    
     """ Runs data processing scripts to turn raw data from (../raw) into
         same sized image and generates labels for all the images 
         ready to be used (saved in ../interim).
     """
-    
     counter = 0
     images = []
     labels = []
-    subdirs = glob.glob(input_filepath + '/*screen') #identify the subdirectories in the input filepath
+    subdirs = glob.glob(input_filepath + '/*screen')
 
     for subdir in subdirs:
         label = os.path.basename(subdir).split('_')[0]

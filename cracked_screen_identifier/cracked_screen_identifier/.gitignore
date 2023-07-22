@@ -90,3 +90,8 @@ target/
 
 #Log files
 /logs
+
+# Git ignore
+.gitignore
+
+#

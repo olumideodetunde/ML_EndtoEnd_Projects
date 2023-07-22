@@ -21,10 +21,8 @@ def main(input_filepath, output_filepath):
     images = []
     labels = []
     subdirs = glob.glob(input_filepath + '/*screen')
-
     for subdir in subdirs:
         label = os.path.basename(subdir).split('_')[0]
-
         for file_path in glob.glob(subdir + '/*.jpg'):
             img = cv2.imread(file_path)
             img = cv2.resize(img, (224,224), interpolation=cv2.INTER_AREA)
@@ -34,7 +32,6 @@ def main(input_filepath, output_filepath):
             images.append(new_filename)
             labels.append(label)
             counter += 1
-
     label = pd.DataFrame({'image': images, 'label': labels})
     label.to_csv(os.path.join(output_filepath, 'labels.csv'), index=False)
     logger = logging.getLogger(__name__)

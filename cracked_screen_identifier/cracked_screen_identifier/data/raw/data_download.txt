@@ -1,0 +1,8 @@
+To download the dataset to work with click the links below:
+
+Perfect screen dataset download:https://cracked-screen-identifer.s3.amazonaws.com/perfect_screen/perfect_screen/perfect_screen.zip
+Cracked screen dataset download:https://cracked-screen-identifer.s3.amazonaws.com/cracked_screen/cracked_screen/cracked_screen.zip
+
+The dataset would be a zip file. Please extract the zip files to have access to the images.
+
+Note: Ensure the dataset is downloaded and saved into the raw folder.

@@ -90,7 +90,7 @@ target/
 .mypy_cache/
 
 #Log files
-/logs
+/logs/
 
 # Git ignore
 .gitignore

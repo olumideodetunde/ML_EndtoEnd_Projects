@@ -1,21 +1,21 @@
 cracked_screen_identifier
 ==============================
 
-This projects presents the complete end to end ML cycle of the cracked_screen_identifier app; an image classification project.
+This projects presents the complete end-to-end ML cycle of the cracked_screen_identifier app; an image classification project. Cracked_screen_identifier takes a phone image and predicts if the screen is broken or not. The simple web interface written with streamlitt and hosted with huggingface and  is available on the [Cracked_screen_identifier](https://huggingface.co/spaces/olumide/Cracked_Screen_Identifier).
+
+This project was developed to ensure reproducibility.The project is structured below:
 
 Project Organization
-------------
+------------------------------
 
     ├── LICENSE
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
     ├── README.md          <- The top-level README for developers using this project.
     ├── data
-    │   ├── external       <- Data from third party sources.
     │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
+    │   ├── processed      <- The final, canonical data sets for model training.
+    │   └── raw            <- The original, immutable data dump. This folder contains the readme to download the dataset
     │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
     │
     ├── models             <- Trained and serialized models, model predictions, or model summaries
     │
@@ -23,9 +23,7 @@ Project Organization
     │                         the creator's initials, and a short `-` delimited description, e.g.
     │                         `1.0-jqp-initial-data-exploration`.
     │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
+    ├── reports           
     │   └── figures        <- Generated graphics and figures to be used in reporting
     │
     ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.

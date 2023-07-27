@@ -58,14 +58,40 @@ git clone https://github.com/olumideodetunde/ML_EndtoEnd_Projects.git
 ```
 This will clone the entire repo to your local machine.
 
-2. Install the requirements by running the following command in your terminal:
+2. Navigate to the project directory by running the following command in your terminal:
+
+```bash
+cd ML_EndtoEnd_Projects/cracked_screen_identifier
+```
+
+3. Install the requirements by running the following command in your terminal:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Navigate to the data folder and select the raw folder. Download the dataset from the link in the readme file and unzip the dataset in the raw folder.
+4. Navigate to the data folder and select the raw folder. Download the dataset from the link in the readme file and unzip the dataset in the raw folder.
 
+5. Run the following command in your terminal to resixe the images making them uniform processed into the interim folder:
 
+```bash
+python src/data/make_dataset.py
+```
+5. Run the following command in your terminal to create the train, validation and test folders:
+
+```bash
+python src/data/make_trainvaltest.py
+```
+7.Run the following command in your terminal to train the model:
+
+```bash
+python src/models/train_model.py
+```
+
+8. Run the following command in your terminal to make predictions and save prediction into the reports folder:
+
+```bash
+python src/models/predict_model.py
+```
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>

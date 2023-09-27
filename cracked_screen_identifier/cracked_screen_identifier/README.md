@@ -77,12 +77,12 @@ pip install -r requirements.txt
 ```bash
 python src/data/make_dataset.py
 ```
-5. Run the following command in your terminal to create the train, validation and test folders:
+6. Run the following command in your terminal to create the train, validation and test folders:
 
 ```bash
 python src/data/make_trainvaltest.py
 ```
-7.Run the following command in your terminal to train the model:
+7. Run the following command in your terminal to train the model:
 
 ```bash
 python src/models/train_model.py

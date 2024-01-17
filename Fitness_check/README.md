@@ -1,62 +1,39 @@
 # Project Title
 
-Simple overview of use/purpose.
+Fitness Check Extractor
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+This program extracts desired datapoints from health data exported as XML from the Apple Health app. The program is written in Python and uses the ElementTree library to parse the XML file. 
 
 ## Getting Started
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* see requirements.txt
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+* git clone the parent repository ML_end_to_end_projects to your local machine
+* navigate to the Fitness_check folder 
+* create a data folder called data in the Fitness_check folder
+* download the XML file from the Apple Health app and save it in the data folder
+* install the required packages using the requirements.txt file by running the following command in the terminal:
+
+```
+pip install -r requirements.txt
+```
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
+* ensure the terminal is in the Fitness_check folder
+* run the following command in the terminal:
 ```
-code blocks for commands
-```
+python fitness_check.py --input_file data/your_xml_file.xml --record_name your_record_name --desired_datanames your_desired_datanames --output_file data/your_output_file.csv
 
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
 ```
 
 ## Authors
 
 Contributors names and contact info
-
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
-
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
-
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
-
-## Acknowledgments
-
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+Olumide Odetunde [@OlumideOdetunde](https://www.linkedin.com/in/olumide-odetunde/)

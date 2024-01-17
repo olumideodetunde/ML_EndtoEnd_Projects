@@ -35,5 +35,4 @@ python fitness_check.py --input_file data/your_xml_file.xml --record_name your_r
 
 ## Authors
 
-Contributors names and contact info
-Olumide Odetunde [@OlumideOdetunde](https://www.linkedin.com/in/olumide-odetunde/)
+Contributor name and contact info: Olumide Odetunde [@OlumideOdetunde](https://www.linkedin.com/in/olumide-odetunde/)

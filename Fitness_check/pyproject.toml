@@ -16,6 +16,7 @@ matplotlib = "^3.8.2"
 pickleshare = "^0.7.5"
 argparse = "^1.4.0"
 logging = "^0.4.9.6"
+pytest = "^8.0.0"
 
 
 [build-system]

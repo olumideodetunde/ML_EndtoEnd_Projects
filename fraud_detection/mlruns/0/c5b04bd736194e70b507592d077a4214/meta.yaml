@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/c5b04bd736194e70b507592d077a4214/artifacts
+end_time: 1719697869683
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c5b04bd736194e70b507592d077a4214
+run_name: peaceful-kite-65
+run_uuid: c5b04bd736194e70b507592d077a4214
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719697869674
+status: 4
+tags: []
+user_id: olumide

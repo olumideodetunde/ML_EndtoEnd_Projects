@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/529ec47991594cf3a28786ff983b635d/artifacts
+end_time: 1719473116137
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 529ec47991594cf3a28786ff983b635d
+run_name: salty-wren-240
+run_uuid: 529ec47991594cf3a28786ff983b635d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719473109487
+status: 4
+tags: []
+user_id: olumide

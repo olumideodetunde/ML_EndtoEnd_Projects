@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/cfd0d48569a54a2b97b8766f5fd70f41/artifacts
+end_time: 1719698187831
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: cfd0d48569a54a2b97b8766f5fd70f41
+run_name: gentle-deer-28
+run_uuid: cfd0d48569a54a2b97b8766f5fd70f41
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719698187819
+status: 4
+tags: []
+user_id: olumide

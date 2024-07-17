@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/d5911b4c9c004427a0284d4fd3b87f31/artifacts
+end_time: 1719462505604
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d5911b4c9c004427a0284d4fd3b87f31
+run_name: resilient-quail-793
+run_uuid: d5911b4c9c004427a0284d4fd3b87f31
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719462505591
+status: 4
+tags: []
+user_id: olumide

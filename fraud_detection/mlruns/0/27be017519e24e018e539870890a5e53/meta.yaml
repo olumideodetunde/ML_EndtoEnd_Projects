@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/27be017519e24e018e539870890a5e53/artifacts
+end_time: 1719474440363
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 27be017519e24e018e539870890a5e53
+run_name: painted-wren-994
+run_uuid: 27be017519e24e018e539870890a5e53
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719474440356
+status: 4
+tags: []
+user_id: olumide

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/9a27b09deb4742ac9c19d344b4e17473/artifacts
+end_time: 1719462589426
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9a27b09deb4742ac9c19d344b4e17473
+run_name: bold-robin-845
+run_uuid: 9a27b09deb4742ac9c19d344b4e17473
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719462585484
+status: 4
+tags: []
+user_id: olumide

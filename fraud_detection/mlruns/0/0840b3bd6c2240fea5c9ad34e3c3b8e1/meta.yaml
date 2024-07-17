@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/0840b3bd6c2240fea5c9ad34e3c3b8e1/artifacts
+end_time: 1719900254736
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0840b3bd6c2240fea5c9ad34e3c3b8e1
+run_name: resilient-sow-312
+run_uuid: 0840b3bd6c2240fea5c9ad34e3c3b8e1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719900250323
+status: 3
+tags: []
+user_id: olumide

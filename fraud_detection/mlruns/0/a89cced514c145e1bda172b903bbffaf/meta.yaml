@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/a89cced514c145e1bda172b903bbffaf/artifacts
+end_time: 1719864890896
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a89cced514c145e1bda172b903bbffaf
+run_name: selective-calf-840
+run_uuid: a89cced514c145e1bda172b903bbffaf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719864888984
+status: 4
+tags: []
+user_id: olumide

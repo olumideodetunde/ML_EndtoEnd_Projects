@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/d7af3cf3eeaf491aa01594a39f283883/artifacts
+end_time: 1719684925607
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d7af3cf3eeaf491aa01594a39f283883
+run_name: suave-mink-604
+run_uuid: d7af3cf3eeaf491aa01594a39f283883
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719684922369
+status: 4
+tags: []
+user_id: olumide

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/092577e9acbe4298b6e78c3575597e69/artifacts
+end_time: 1719903698065
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 092577e9acbe4298b6e78c3575597e69
+run_name: incongruous-jay-753
+run_uuid: 092577e9acbe4298b6e78c3575597e69
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719903686658
+status: 4
+tags: []
+user_id: olumide

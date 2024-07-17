@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/efe5d8d677c04f8bb2ae0ca882962c8f/artifacts
+end_time: 1719865557317
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: efe5d8d677c04f8bb2ae0ca882962c8f
+run_name: melodic-gnu-961
+run_uuid: efe5d8d677c04f8bb2ae0ca882962c8f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719865553557
+status: 3
+tags: []
+user_id: olumide

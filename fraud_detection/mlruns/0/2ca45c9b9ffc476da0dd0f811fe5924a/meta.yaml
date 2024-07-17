@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/2ca45c9b9ffc476da0dd0f811fe5924a/artifacts
+end_time: 1719727662975
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2ca45c9b9ffc476da0dd0f811fe5924a
+run_name: efficient-finch-822
+run_uuid: 2ca45c9b9ffc476da0dd0f811fe5924a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719727662960
+status: 4
+tags: []
+user_id: olumide

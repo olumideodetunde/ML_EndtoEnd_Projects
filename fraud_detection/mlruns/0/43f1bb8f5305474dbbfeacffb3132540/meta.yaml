@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/43f1bb8f5305474dbbfeacffb3132540/artifacts
+end_time: 1719728001736
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 43f1bb8f5305474dbbfeacffb3132540
+run_name: valuable-lynx-502
+run_uuid: 43f1bb8f5305474dbbfeacffb3132540
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719728001726
+status: 4
+tags: []
+user_id: olumide

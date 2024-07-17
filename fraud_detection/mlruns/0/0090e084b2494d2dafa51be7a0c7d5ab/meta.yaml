@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/0090e084b2494d2dafa51be7a0c7d5ab/artifacts
+end_time: 1719698039738
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0090e084b2494d2dafa51be7a0c7d5ab
+run_name: angry-vole-840
+run_uuid: 0090e084b2494d2dafa51be7a0c7d5ab
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719698039726
+status: 4
+tags: []
+user_id: olumide

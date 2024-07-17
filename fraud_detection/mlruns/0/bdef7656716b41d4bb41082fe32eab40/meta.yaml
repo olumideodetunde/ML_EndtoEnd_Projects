@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/bdef7656716b41d4bb41082fe32eab40/artifacts
+end_time: 1719865517099
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: bdef7656716b41d4bb41082fe32eab40
+run_name: merciful-kit-63
+run_uuid: bdef7656716b41d4bb41082fe32eab40
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719865515189
+status: 4
+tags: []
+user_id: olumide

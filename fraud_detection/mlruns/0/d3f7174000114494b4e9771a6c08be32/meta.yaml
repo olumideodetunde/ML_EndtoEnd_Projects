@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/d3f7174000114494b4e9771a6c08be32/artifacts
+end_time: 1719941741641
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d3f7174000114494b4e9771a6c08be32
+run_name: shivering-donkey-367
+run_uuid: d3f7174000114494b4e9771a6c08be32
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719941730056
+status: 3
+tags: []
+user_id: olumide

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/c91f44a07eb8456ba532f81dfeb1a979/artifacts
+end_time: 1719865467058
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c91f44a07eb8456ba532f81dfeb1a979
+run_name: brawny-carp-808
+run_uuid: c91f44a07eb8456ba532f81dfeb1a979
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719865465238
+status: 4
+tags: []
+user_id: olumide

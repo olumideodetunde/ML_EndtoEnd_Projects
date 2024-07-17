@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/ccd7112df6c44103801204abe1672b99/artifacts
+end_time: 1719940271857
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ccd7112df6c44103801204abe1672b99
+run_name: learned-koi-134
+run_uuid: ccd7112df6c44103801204abe1672b99
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719940260813
+status: 4
+tags: []
+user_id: olumide

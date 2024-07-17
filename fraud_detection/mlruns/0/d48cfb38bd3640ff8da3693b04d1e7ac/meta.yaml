@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/d48cfb38bd3640ff8da3693b04d1e7ac/artifacts
+end_time: 1719941617454
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d48cfb38bd3640ff8da3693b04d1e7ac
+run_name: caring-lark-975
+run_uuid: d48cfb38bd3640ff8da3693b04d1e7ac
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719941606330
+status: 3
+tags: []
+user_id: olumide

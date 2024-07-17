@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/3764e4167b36410fb2a5748fa7cb7836/artifacts
+end_time: 1719940322955
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3764e4167b36410fb2a5748fa7cb7836
+run_name: vaunted-grub-767
+run_uuid: 3764e4167b36410fb2a5748fa7cb7836
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719940311907
+status: 4
+tags: []
+user_id: olumide

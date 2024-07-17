@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/92ee7e4716914f73b11e13366a7a9d52/artifacts
+end_time: 1719462339172
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 92ee7e4716914f73b11e13366a7a9d52
+run_name: nosy-fowl-10
+run_uuid: 92ee7e4716914f73b11e13366a7a9d52
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719462339166
+status: 4
+tags: []
+user_id: olumide

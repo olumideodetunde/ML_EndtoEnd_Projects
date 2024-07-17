@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/ab90fbef0d7740d6a536c0b738ce8444/artifacts
+end_time: 1719942891681
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ab90fbef0d7740d6a536c0b738ce8444
+run_name: traveling-boar-406
+run_uuid: ab90fbef0d7740d6a536c0b738ce8444
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719942880457
+status: 4
+tags: []
+user_id: olumide

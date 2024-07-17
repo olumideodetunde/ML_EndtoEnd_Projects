@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/412d8b3f5d9a45b8ba03f1a9536f6e29/artifacts
+end_time: 1719899986167
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 412d8b3f5d9a45b8ba03f1a9536f6e29
+run_name: aged-crane-173
+run_uuid: 412d8b3f5d9a45b8ba03f1a9536f6e29
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719899983591
+status: 3
+tags: []
+user_id: olumide

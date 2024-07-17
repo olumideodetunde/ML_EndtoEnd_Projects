@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/234fa3d0ce544d828fbcdc3c4aeec984/artifacts
+end_time: 1719474477082
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 234fa3d0ce544d828fbcdc3c4aeec984
+run_name: whimsical-lark-401
+run_uuid: 234fa3d0ce544d828fbcdc3c4aeec984
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719474477074
+status: 4
+tags: []
+user_id: olumide

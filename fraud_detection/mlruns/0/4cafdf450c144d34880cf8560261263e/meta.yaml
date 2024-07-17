@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/4cafdf450c144d34880cf8560261263e/artifacts
+end_time: 1719728106200
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4cafdf450c144d34880cf8560261263e
+run_name: auspicious-finch-356
+run_uuid: 4cafdf450c144d34880cf8560261263e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719728106190
+status: 4
+tags: []
+user_id: olumide

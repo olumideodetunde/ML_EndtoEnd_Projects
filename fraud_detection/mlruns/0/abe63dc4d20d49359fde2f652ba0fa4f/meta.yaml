@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/abe63dc4d20d49359fde2f652ba0fa4f/artifacts
+end_time: 1719473234910
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: abe63dc4d20d49359fde2f652ba0fa4f
+run_name: crawling-hound-800
+run_uuid: abe63dc4d20d49359fde2f652ba0fa4f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719473230286
+status: 4
+tags: []
+user_id: olumide

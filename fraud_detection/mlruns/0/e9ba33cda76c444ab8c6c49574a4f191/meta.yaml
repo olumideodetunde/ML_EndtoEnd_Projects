@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/e9ba33cda76c444ab8c6c49574a4f191/artifacts
+end_time: 1719473927837
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e9ba33cda76c444ab8c6c49574a4f191
+run_name: salty-loon-880
+run_uuid: e9ba33cda76c444ab8c6c49574a4f191
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719473923123
+status: 4
+tags: []
+user_id: olumide

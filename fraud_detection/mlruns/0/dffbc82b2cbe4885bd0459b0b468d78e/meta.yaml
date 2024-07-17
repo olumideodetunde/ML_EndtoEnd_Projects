@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/dffbc82b2cbe4885bd0459b0b468d78e/artifacts
+end_time: 1719903636640
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: dffbc82b2cbe4885bd0459b0b468d78e
+run_name: illustrious-fly-868
+run_uuid: dffbc82b2cbe4885bd0459b0b468d78e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719903625716
+status: 4
+tags: []
+user_id: olumide
